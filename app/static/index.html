@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#100e0f">
+  <meta name="description" content="Your next great cinema experience. Explore films, choose your seat, and book your tickets.">
+  <title>Cinemax — Feel every frame.</title>
+  <link rel="icon" type="image/svg+xml" href="/static/assets/mark.svg">
+  <script>
+    try {
+      document.documentElement.dataset.theme = localStorage.getItem('cinema-theme') || 'dark';
+      document.documentElement.lang = localStorage.getItem('cinema-language') || 'en';
+    } catch (_) {}
+  </script>
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="/static/script.js" defer></script>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content / К содержимому</a>
+  <header class="site-header" id="header"></header>
+  <main id="main" tabindex="-1"><div class="initial-loading"><span class="loading-reel"></span><p>Cinemax</p></div></main>
+  <footer id="footer" class="footer"></footer>
+  <div id="modal-root"></div>
+  <div id="toasts" class="toast-stack" role="status" aria-live="polite"></div>
+  <div class="curtain-stage" id="curtains" aria-hidden="true">
+    <div class="curtain left"></div><div class="curtain right"></div>
+    <div class="curtain-logo"><img src="/static/assets/mark.svg" alt="">Cinemax</div>
+  </div>
+  <noscript>This cinema needs JavaScript enabled. / Для работы сайта включите JavaScript.</noscript>
+</body>
+</html>
